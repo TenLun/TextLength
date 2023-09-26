@@ -1,0 +1,19 @@
+{
+  "name": "TextLen",
+  "description": "",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "sel.js"
+  },
+  "action": {
+    "default_popup": "pop.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["sel.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
